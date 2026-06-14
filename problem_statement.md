@@ -262,6 +262,23 @@ Your code must include an evaluation pipeline that gives the accuracy/confidence
 
 ---
 
+## Operational Analysis
+
+Include a short operational analysis in `evaluation/evaluation_report.md`.
+
+| Item | What To Report |
+|---|---|
+| Model calls | Approximate number of model calls for `sample.csv` and `test.csv`. |
+| Token usage | Approximate input/output tokens used. |
+| Image usage | Number of images processed and how images are processed. |
+| Cost estimate | Approximate cost to process the full test set. State the pricing assumptions. |
+| Latency | Approximate runtime per row sample and test processing. |
+| TPM/RPM considerations | Whether your approach may hit token-per-minute or request-per-minute limits. |
+
+You are not expected to optimize perfectly, but your solution should show that you considered cost, latency, rate limits, and unnecessary repeated calls.
+
+---
+
 ## Submission
 
 Submit:
@@ -269,7 +286,7 @@ Submit:
 
 | File              | Description                                                           |
 | ----------------- | --------------------------------------------------------------------- |
-| `code.zip`        | Full runnable solution, prompts/configs, README, and evaluation code. |
+| `code.zip`        | Full runnable solution, prompts/configs, README, and `evaluation/` folder. |
 | `output.csv`      | Predictions for all rows in `dataset/test.csv`.                       |
 | `chat_transcript` | Conversation transcript showing how you developed or used the system. |
 
