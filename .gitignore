@@ -1,0 +1,27 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Final predictions and evaluation report are part of the submission (tracked).
+# Intermediate evaluation artifacts (HTML report, scratch prediction CSVs) are not.
+evaluation/*
+!evaluation/evaluation_report.md
+!evaluation/main.py
+!evaluation/compare.py
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Redundant: zip contents are already tracked as files
+submission_code.zip
+
+# AGENTS.md §2: chat transcript log must never be committed
+log.txt
